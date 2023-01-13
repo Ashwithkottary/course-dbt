@@ -1,0 +1,34 @@
+version: 2
+
+sources: 
+
+    - name: postgres
+      schema: public
+      database: raw 
+
+      quoting:
+        database: false
+        schema: false
+        identifier: false
+      
+      tables: 
+        - name: users
+          description: table contains personal information of users 
+
+        - name: addresses
+          description: table contains address information of users 
+
+        - name: events
+          description: table contains event based information such as page_view, add_to_cart, checkout & package_shipped of user per order  
+        
+        - name: orders
+          description: table contains information such as cost, shipping & delivery details
+
+        - name: products
+          description: table contains name, inventory & price information of all products
+
+        - name: order_items
+          description: table conatins information regarding quantity of products ordered
+        
+        - name: promos
+          description: table contains information regarding active and inactive promos/discounts

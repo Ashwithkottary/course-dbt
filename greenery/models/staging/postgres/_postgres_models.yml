@@ -1,0 +1,63 @@
+version: 2
+
+models: 
+    - name: stg_addresses
+      description: model contains address information of users 
+      columns: 
+        - name: address_id
+          tests:
+            - not null
+            - unique
+
+    - name: stg_users
+      description: model contains contains demographics/personal information of users  
+      columns: 
+        - name: user_id
+          tests:
+            - not null
+            - unique
+
+    - name: stg_promos
+      description: model contains information regarding active and inactive promos/discounts  
+      columns: 
+        - name: promo_id
+          tests:
+            - not null
+            - unique
+
+    - name: stg_products
+      description: model contains name, inventory & price information of all products  
+      columns: 
+        - name: product_id
+          tests:
+            - not null
+            - unique
+
+    - name: stg_orders
+      description: model contains information such as cost, shipping & delivery details 
+      columns: 
+        - name: order_id
+          tests:
+            - not null
+            - unique
+
+    - name: stg_order_items
+      description: model conatins information regarding quantity of products ordered 
+      columns: 
+        - name: order_id
+          tests:
+            - not null 
+        - name: product_id
+          tests:
+            - not null
+            
+
+    - name: stg_events
+      description: model contains event based information such as page_view, add_to_cart, checkout & package_shipped of user per order   
+      columns: 
+        - name: event_id
+          tests:
+            - not null
+            - unique
+
+        
