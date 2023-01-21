@@ -24,11 +24,11 @@ Performed the joins as an intermediate model and dim table is just a simple sele
 
 - fact_user_orders: created this fact model to represent measures such as total_orders, first_order_date, last_order_date, overall_order_cost, overall_shipping_cost & total_cost from a user perspective. This table would be useful to perform analyses on user behaviour. 
 
-Performed the joins as an intermediate model and dim table is just a simple select from the intermidate model
+Performed the joins as an intermediate model and fact table is just a simple select from the intermidate model
 
 - fact_product_measures: created this fact model to represent measures such as total_page_views, total_add_to_carts, total_sessions,  & total_orders from a product perspective. This table would be useful to perform analyses on trending products and to understand user preference on product level 
 
-Performed the joins as an intermediate model and dim table is just a simple select from the intermidate model
+Performed the joins as an intermediate model and fact table is just a simple select from the intermidate model
 
 
 ## 3) What assumptions are you making about each model? (i.e. why are you adding each test?) & Did you find any “bad” data as you added and ran tests on your models? How did you go about either cleaning the data in the dbt model or adjusting your assumptions/tests?
@@ -52,6 +52,6 @@ Performed the joins as an intermediate model and dim table is just a simple sele
 ```
 
 - Following orders changed it's status from "preparing" to "shipped" 
-  '265f9aae-561a-4232-a78a-7052466e46b7'
-  'b4eec587-6bca-4b2a-b3d3-ef2db72c4a4f'
+  '265f9aae-561a-4232-a78a-7052466e46b7',
+  'b4eec587-6bca-4b2a-b3d3-ef2db72c4a4f'  &
   'e42ba9a9-986a-4f00-8dd2-5cf8462c74ea'
