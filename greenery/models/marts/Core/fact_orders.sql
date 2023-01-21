@@ -1,15 +1,9 @@
-{{
-    config(
-        materialized = 'view'
-    )
-}}
-
-SELECT
+select 
 ORDER_ID
 , PROMO_ID
 , USER_ID
 , ADDRESS_ID
-, CREATED_AT 
+, CREATED_AT
 , ORDER_COST
 , SHIPPING_COST
 , ORDER_TOTAL
@@ -18,4 +12,4 @@ ORDER_ID
 , ESTIMATED_DELIVERY_AT
 , DELIVERED_AT
 , STATUS
-FROM {{source('postgres','orders')}}
+from {{ ref('stg_orders')}}
