@@ -1,0 +1,14 @@
+version: 2
+
+macros: 
+    - name: exclude_columns_on_select
+      description: This macro outputs a simple 'select from table' sql statement with the possibility to exclude upto 10 columns
+
+    - name: get_distinct_column_values
+      description: This macro returns a list of unique values in a column
+
+    - name: grant_role
+      description: This macro grants access to a model for a role 
+
+    - name: warehouse_resize
+      description: This macro allows you to scale up & scale down the target warehouse size on prod and dev environment
